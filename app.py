@@ -38,6 +38,9 @@ def signup():
 
     return render_template('signup.html')
 
+@app.route('/map', methods=['GET','POST'])
+def map():
+    return render_template("map.html")
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')

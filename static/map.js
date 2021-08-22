@@ -1,40 +1,16 @@
-let map;
-
-function initMap() {
-    // const codeNextHarlem = { lat: 40.826297630189195, lng: -73.94860685803098 };
-    // const codeNextChelsea = { lat: 40.741511656087575, lng: -74.00254440220917 };
-    // const nypl = { lat: 40.75359558129044, lng: -73.98191480220885}
-    const codeNextNewYork = { lat: 40.75959120191965, lng: -73.99207367721833};
-    const codeNextOakland = { lat: 37.77624876854818, lng: -122.2242399292719 }; 
-    map = new google.maps.Map(document.getElementById("map"), {
-        center: { lat: 40.75959120191965, lng: -73.99207367721833 },
-        zoom: 3,
-    });
-    const markerNewYork = new google.maps.Marker({
-        icon: 'https://raw.githubusercontent.com/Concept211/Google-Maps-Markers/master/images/marker_blue2.png',
-        position: codeNextNewYork,
-        map: map,
-      });
-    const markerOakland = new google.maps.Marker({
-        icon: 'https://raw.githubusercontent.com/Concept211/Google-Maps-Markers/master/images/marker_blue1.png',
-        position: codeNextOakland,
-        map: map,
-      });
-
-    // const markerOne = new google.maps.Marker({
-    //     position: codeNextHarlem,
-    //     map: map,
-    //   });
-    // const markerTwo = new google.maps.Marker({
-    //     position: codeNextChelsea,
-    //     map: map,
-    //   });
-    // const markerThree = new google.maps.Marker({
-    //     position: nypl,
-    //     map: map,
-    //   });
-
-    // Create the search box and link it to the UI element.
+// This example adds a search box to a map, using the Google Place Autocomplete
+// feature. People can enter geographical searches. The search box will return a
+// pick list containing a mix of places and predicted search terms.
+// This example requires the Places library. Include the libraries=places
+// parameter when you first load the API. For example:
+// <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
+function initAutocomplete() {
+  const map = new google.maps.Map(document.getElementById("map"), {
+    center: { lat: 40.14882383876277, lng: -99.91275895084979 },
+    zoom: 4,
+    mapTypeId: "roadmap",
+  });
+  // Create the search box and link it to the UI element.
   const input = document.getElementById("pac-input");
   const searchBox = new google.maps.places.SearchBox(input);
   map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
@@ -90,3 +66,20 @@ function initMap() {
     map.fitBounds(bounds);
   });
 }
+
+// const codeNextNewYork = { lat: 40.75959120191965, lng: -73.99207367721833};
+//     const codeNextOakland = { lat: 37.77624876854818, lng: -122.2242399292719 }; 
+//     map = new google.maps.Map(document.getElementById("map"), {
+//         center: { lat: 40.75959120191965, lng: -73.99207367721833 },
+//         zoom: 3,
+//     });
+//     const markerNewYork = new google.maps.Marker({
+//         icon: 'https://raw.githubusercontent.com/Concept211/Google-Maps-Markers/master/images/marker_blue2.png',
+//         position: codeNextNewYork,
+//         map: map,
+//       });
+//     const markerOakland = new google.maps.Marker({
+//         icon: 'https://raw.githubusercontent.com/Concept211/Google-Maps-Markers/master/images/marker_blue1.png',
+//         position: codeNextOakland,
+//         map: map,
+//       });
