@@ -42,5 +42,9 @@ def signup():
 def map():
     return render_template("map.html")
 
+@app.route('/events', methods=['GET','POST'])
+def events():
+    return render_template("events.html")
+
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')

@@ -50,7 +50,7 @@ function initAutocomplete() {
       markers.push(
         new google.maps.Marker({
           map,
-          icon,
+          icon: 'https://raw.githubusercontent.com/Concept211/Google-Maps-Markers/master/images/marker_blue4.png',
           title: place.name,
           position: place.geometry.location,
         })
@@ -65,21 +65,31 @@ function initAutocomplete() {
     });
     map.fitBounds(bounds);
   });
+  // const codeNextNewYork = { lat: 40.75959120191965, lng: -73.99207367721833};
+  // const markerNewYork = new google.maps.Marker({
+  //       icon: 'https://raw.githubusercontent.com/Concept211/Google-Maps-Markers/master/images/marker_blue2.png',
+  //       position: codeNextNewYork,
+  //       map: map,
+  //     });
+  const temescal = {lat: 37.833446054675974, lng: -122.26073802330863};
+  const markerTemescal = new google.maps.Marker({
+    icon: 'https://raw.githubusercontent.com/Concept211/Google-Maps-Markers/master/images/marker_blue2.png',
+    position:temescal,
+    map:map
+  });
+  const florestaGardensBadrick = {lat: 37.705811934915445, lng: -122.14962848068322};
+  const markerFlorestaGardensBadrick = new google.maps.Marker({
+    icon: 'https://raw.githubusercontent.com/Concept211/Google-Maps-Markers/master/images/marker_blue5.png',
+    position:florestaGardensBadrick,
+    map:map
+  });
+  markerTemescal.addListener("click", () => {
+    location.href="http://192.168.1.92:5000/events"
+  });
+  // const codeNextOakland = { lat: 37.77624876854818, lng: -122.2242399292719 }; 
+  // const markerOakland = new google.maps.Marker({
+  //       icon: 'https://raw.githubusercontent.com/Concept211/Google-Maps-Markers/master/images/marker_blue1.png',
+  //       position: codeNextOakland,
+  //       map: map,
+  //     });
 }
-
-// const codeNextNewYork = { lat: 40.75959120191965, lng: -73.99207367721833};
-//     const codeNextOakland = { lat: 37.77624876854818, lng: -122.2242399292719 }; 
-//     map = new google.maps.Map(document.getElementById("map"), {
-//         center: { lat: 40.75959120191965, lng: -73.99207367721833 },
-//         zoom: 3,
-//     });
-//     const markerNewYork = new google.maps.Marker({
-//         icon: 'https://raw.githubusercontent.com/Concept211/Google-Maps-Markers/master/images/marker_blue2.png',
-//         position: codeNextNewYork,
-//         map: map,
-//       });
-//     const markerOakland = new google.maps.Marker({
-//         icon: 'https://raw.githubusercontent.com/Concept211/Google-Maps-Markers/master/images/marker_blue1.png',
-//         position: codeNextOakland,
-//         map: map,
-//       });
