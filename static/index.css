@@ -1,10 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist&display=swap');
+
+:root{
+    --light-blue: #D6E3EA;
+    --light-steel-blue: #B4C5E4;
+    --duke-blue: #090C9B;
+}
+
 html,
 body {
     height: 100%;
     margin: 0;
     padding: 0;
+    font-family: 'Urbanist', sans-serif;
+    background-color: var(--duke-blue);
+}
+
+img{
+    width: 100vw;
+    background-color: var(--light-blue);
+}
+
+#login-btn{
+    text-align:center;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    text-decoration: none;
+
+    color: #000000;
+    position: absolute;
+    width: 334px;
+    height: 80px;
+    left: calc(50% - 334px/2);
+    top: calc(50% - 80px/2 + 292px);
+
+    background: #D6E3EA;
+    border: 1px solid #B4C5E4;
+    box-sizing: border-box;
+    border-radius: 15px;
 }
 
 #map{
-    height:50%;
+    height:60vh;
 }

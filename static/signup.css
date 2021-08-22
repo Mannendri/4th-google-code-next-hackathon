@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist&display=swap');
+
+:root{
+    --light-blue: #D6E3EA;
+    --light-steel-blue: #B4C5E4;
+    --duke-blue: #090C9B;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Urbanist', sans-serif;
+}
+
+#nav{
+    background-color: var(--light-blue);
+}
+
+img{
+    width: 50vw;
+}
+
+.signup-form{
+    width: 55%;
+    margin: 10vh auto;
+}
